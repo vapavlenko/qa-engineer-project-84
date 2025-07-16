@@ -1,0 +1,32 @@
+---
+- summary: |
+    Ошибка 500 при оформлении заказа
+  environment: |
+    Yandex Browser 25.6.0.2370 (64-bit)
+    ОС Windows 10 22H2 19045.6093
+  steps-to-reproduce: |
+    - Выбрать товар Huawei Matebook X Pro
+    - Нажать "Add to cart"
+    - Перейти в корзину "Cart"
+    - Нажать "Checkout".
+  expected-result: |
+    Заказ успешно оформлен, а на сервер ушёл запрос типа Get с информацией о заказе, возвращая код 200.
+  actual-result: |
+    Заказ успешно оформлен, запрос отправляется типа Get возвращая код 500.
+---
+- summary: |
+    Заказ товара, которого нет в наличии
+  environment: |
+    Yandex Browser 25.6.0.2370 (64-bit)
+    ОС Windows 10 22H2 19045.6093
+  steps-to-reproduce: |
+    - Выбрать фильтр "In stock".
+    - Убрать галочку "In stock".
+    - Нажать на товар "Samsung Galaxy S8".
+    - Нажать "Add to cart".
+    - Нажать на "Cart".
+    - Нажать на "Checkout".
+  expected-result: |
+    Должна возникать ошибка "Out of stock".
+  actual-result: |
+    Заказ оформляется успешно.
