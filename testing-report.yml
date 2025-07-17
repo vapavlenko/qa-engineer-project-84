@@ -1,28 +1,28 @@
 ---
 - summary: |
     Успешная покупка товара
-status: fail
+  status: fail
 
 - summary: |
     Смена языка на странице
-status: pass
-
+  status: pass
+  
 - summary: |
     Возврат на главную страницу магазина из корзины
-status: pass
-
+  status: pass
+  
 - summary: |
     Очистка корзины
-status: pass
-
+  status: pass
+  
 - summary: |
     Заказ товара, которого нет в наличии
-status: fail
-
+  status: fail
+  
 - summary: |
     Успешная фильтрация товара (смартфоны)
-status: pass
-
+  status: pass
+  
 - summary: |
     Перелистывание страниц до конца списка
-status: fail
+  status: fail
