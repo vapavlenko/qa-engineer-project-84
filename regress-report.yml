@@ -1,46 +1,46 @@
 ---
 test-cases:
-- summary: |
-    Успешная покупка товара
-status: fail
+    - summary: |
+        Успешная покупка товара
+    status: fail
 
-- summary: |
-    Смена языка на странице
-status: pass
+    - summary: |
+        Смена языка на странице
+    status: pass
 
-- summary: |
-       Возврат на главную страницу магазина из корзины
-status: pass
+    - summary: |
+        Возврат на главную страницу магазина из корзины
+    status: pass
 
-- summary: |
-       Очистка корзины
-status: pass
+    - summary: |
+        Очистка корзины
+    status: pass
 
-- summary: |
-       Заказ товара, которого нет в наличии
-status: pass
+    - summary: |
+        Заказ товара, которого нет в наличии
+    status: pass
 
-- summary: |
-       Успешная фильтрация товара
-status: pass
+    - summary: |
+        Успешная фильтрация товара
+    status: pass
     
-- summary: |
-       Перелистывание страниц до конца списка
-status: pass
+    - summary: |
+        Перелистывание страниц до конца списка
+    status: pass
 
 bugreports:
-  - summary: |
-      Успешная покупка товара
-  environment: |
-      Yandex Browser 25.6.0.2370 (64-bit)
-      ОС Windows 10 22H2 19045.6093
-  steps-to-reproduce: |
-      - Выбрать товар Huawei Matebook X Pro
-      - Нажать "Add to cart"
-      - Перейти в корзину "Cart"
-      - Нажать "Checkout".
-  expected-result: |
-      Заказ успешно оформлен, а на сервер ушёл запрос типа Get с информацией о заказе, возвращая код 200.
-  actual-result: |
-      Заказ успешно оформлен, запрос отправляется типа Get возвращая код 500.
-      Ошибка не изменилась, и изображена на скриншоте: error500store.PNG
+    - summary: |
+        Успешная покупка товара
+    environment: |
+        Yandex Browser 25.6.0.2370 (64-bit)
+        ОС Windows 10 22H2 19045.6093
+    steps-to-reproduce: |
+        - Выбрать товар Huawei Matebook X Pro
+        - Нажать "Add to cart"
+        - Перейти в корзину "Cart"
+        - Нажать "Checkout".
+    expected-result: |
+        Заказ успешно оформлен, а на сервер ушёл запрос типа Get с информацией о заказе, возвращая код 200.
+    actual-result: |
+        Заказ успешно оформлен, запрос отправляется типа Get возвращая код 500.
+        Ошибка не изменилась, и изображена на скриншоте: error500store.PNG
