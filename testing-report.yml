@@ -65,7 +65,7 @@
 
 - summary: |
     Успешная покупка товара
-  status: pass
+  status: fail
 
 - summary: |
     Закрытие окна заказа
